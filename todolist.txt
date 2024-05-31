@@ -1,0 +1,7 @@
+
+- Comprobar si el mapa no existe y salir con error.
+- Comprobar si puedo hacer el bonus las main funcs
+- Terminar bonus
+	Enemigos
+	Animaciones
+	Contador

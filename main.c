@@ -64,7 +64,7 @@ static void	put_images_to_window(t_so_long sl)
 		putline(l, sl, 0);
 		l++;
 	}
-	printf("\n-%d- moves\n", 0);
+	ft_printf("\n-%d- moves\n", 0);
 }
 
 int	main(int argc, char **argv)

@@ -16,18 +16,18 @@ int	ft_error(int f)
 {
 	printf("\033[0;31mError:\033[0m ");
 	if (f == 1)
-		return (printf("There must be at least one player and only one.\n"));
+		return (ft_printf("There must be at least one player and only one.\n"));
 	if (f == 2)
-		return (printf("There must be at least one coin.\n"));
+		return (ft_printf("There must be at least one coin.\n"));
 	if (f == 3)
-		return (printf("What you gonna do...?\n"));
+		return (ft_printf("What you gonna do...?\n"));
 	if (f == 4)
-		return (printf("You don't give a damn\n"));
+		return (ft_printf("You don't give a damn\n"));
 	if (f == 5)
-		return (printf("Your fly is down... Check the walls\n"));
+		return (ft_printf("Your fly is down... Check the walls\n"));
 	if (f == 6)
-		return (printf("Something went wrong with the images\n"));
+		return (ft_printf("Something went wrong with the images\n"));
 	if (f == 7)
-		return (printf("No such map\n"));
+		return (ft_printf("No such map\n"));
 	return (1);
 }

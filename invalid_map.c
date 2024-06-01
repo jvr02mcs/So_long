@@ -34,7 +34,7 @@ int	invalid_map(char **map, size_t len)
 {
 	if (invalid_struct(map))
 	{
-		printf("\033[0;31mError:\033[0m invalid map struct\n");
+		ft_printf("\033[0;31mError:\033[0m invalid map struct\n");
 		return (1);
 	}
 	if (invalid_chars(map, len))

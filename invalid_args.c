@@ -15,7 +15,7 @@ int	bad_extension(char **argv)
 	b_four = argv[1][i - 1] != 'r';
 	if (b_one | b_two | b_three | b_four)
 	{
-		printf("\033[0;31mError:\033[0m invalid type of arguments\n");
+		ft_printf("\033[0;31mError:\033[0m invalid type of arguments\n");
 		return (1);
 	}
 	else
@@ -26,10 +26,12 @@ int	invalid_args(int argc, char **argv)
 {
 	if (argc != 2)
 	{
-		printf("\033[0;31mError:\033[0m invalid number of arguments\n");
+		ft_printf("\033[0;31mError:\033[0m invalid number of arguments\n");
 		return (1);
 	}
 	if (bad_extension(argv))
 		return (1);
+	if (invalid_images())
+		return (ft_error(6));
 	return (0);
 }

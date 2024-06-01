@@ -3,6 +3,8 @@ YELLOW = \033[0;33m
 RED = \033[0;31m
 NC = \033[0m
 SRC = main.c\
+	close_win.c\
+	move.c\
 	init_game_win.c\
 	count_lines.c\
 	putline.c\

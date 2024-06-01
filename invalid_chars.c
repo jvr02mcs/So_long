@@ -12,12 +12,10 @@ int	bad_char(char c)
 	ch.encheck = 'G' == c;
 	if (ch.ocheck || ch.wcheck || ch.excheck)
 		return (0);
-	if (ch.plyrcheck || ch.ccheck)
+	if (ch.plyrcheck || ch.ccheck || ch.encheck)
 		return (0);
 	if (c == '\n')
 		return (0);
-	if (ch.encheck)
-		return (ft_error(6));
 	return (ft_error(4));
 }
 

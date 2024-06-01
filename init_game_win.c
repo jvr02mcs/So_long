@@ -26,13 +26,13 @@ void	init_game_win(t_so_long *sl)
 	if (!sl->mlx_ptr)
 	{
 		free_map(sl->map, 1);
-		printf("\033[0;31mError:\033[0m Failed to initialize mlx.\n");
+		ft_printf("\033[0;31mError:\033[0m Failed to initialize mlx.\n");
 		exit(EXIT_FAILURE);
 	}
-	sl->imgs.f.path = "./images/nothing.png.xpm";
-	sl->imgs.w.path = "./images/wall.png.xpm";
-	sl->imgs.c.path = "./images/coin.png.xpm";
-	sl->imgs.ex.path = "./images/exit.png.xpm";
+	sl->imgs.f.path = "./images/nothing.xpm";
+	sl->imgs.w.path = "./images/wall.xpm";
+	sl->imgs.c.path = "./images/coin.xpm";
+	sl->imgs.ex.path = "./images/exit.xpm";
 	xpm_file_to_image(sl);
 	sl->mlx_win = mlx_new_window(sl->mlx_ptr, (32 * (ft_strlen(sl->map[0]) - 1)),
 			32 * sl->lns - 1, "PACMON");
@@ -41,7 +41,7 @@ void	init_game_win(t_so_long *sl)
 		mlx_destroy_display(sl->mlx_ptr);
 		free(sl->mlx_ptr);
 		free_map(sl->map, 1);
-		printf("\033[0;31mError:\033[0m Failed to create window.\n");
+		ft_printf("\033[0;31mError:\033[0m Failed to create window.\n");
 		exit(EXIT_FAILURE);
 	}
 }

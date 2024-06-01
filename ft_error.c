@@ -14,7 +14,9 @@ int	ft_error(int f)
 	if (f == 5)
 		return (printf("Your fly is down... Check the walls\n"));
 	if (f == 6)
-		return (printf("Use 'make bonus' to use this map\n"));
+		return (printf("Something went wrong with the images\n"));
+	if (f == 7)
+		return (printf("No such map\n"));
 	return (1);
 }
 

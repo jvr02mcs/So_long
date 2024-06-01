@@ -24,4 +24,5 @@ int	invalid_images(void)
 	if (fd < 0)
 		return (1);
 	close(fd);
+	return (0);
 }

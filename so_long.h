@@ -67,6 +67,7 @@ int		invalid_args(int argc, char **argv);
 int		invalid_walls(char **map, size_t len);
 int 	invalid_chars(char **map, size_t len);
 int		invalid_map(char **map, size_t len);
+int		invalid_images(void);
 size_t	count_lines(char **argv);
 char	**read_map(char **argv, int lns);
 

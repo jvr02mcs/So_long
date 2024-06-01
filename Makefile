@@ -13,6 +13,7 @@ SRC = main.c\
 	invalid_chars.c\
 	invalid_args.c\
 	invalid_map.c\
+	invalid_images.c\
 	ft_error.c\
 	get_next_line/get_next_line.c\
 	get_next_line/get_next_line_utils.c\

@@ -12,10 +12,35 @@
 
 #include "so_long.h"
 
+static int	invalid_images(void)
+{
+	int	fd;
+
+	fd = open("./images/plyr.xpm", O_RDONLY);
+	if (fd < 0)
+		return (1);
+	close(fd);
+	fd = open("./images/plyr_up.xpm", O_RDONLY);
+	if (fd < 0)
+		return (1);
+	close(fd);
+	fd = open("./images/plyr_opo.xpm", O_RDONLY);
+	if (fd < 0)
+		return (1);
+	close(fd);
+	fd = open("./images/plyr_down.xpm", O_RDONLY);
+	if (fd < 0)
+		return (1);
+	close(fd);
+	return (0);
+}
+
 int	invalid_images(void)
 {
 	int	fd;
 
+	if (invalid_plyr_images())
+		return (1);
 	fd = open("./images/nothing.xpm", O_RDONLY);
 	if (fd < 0)
 		return (1);

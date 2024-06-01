@@ -1,14 +1,14 @@
 #ifndef SO_LONG_H
-#define SO_LONG_H
-#include "./minilibx-linux/mlx.h"
-#include "./minilibx-linux/mlx_int.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdbool.h>
+# define SO_LONG_H
+# include "./minilibx-linux/mlx.h"
+# include "./minilibx-linux/mlx_int.h"
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdbool.h>
 # include <sys/wait.h>
-#include "libft/libft.h"
-#include "get_next_line/get_next_line.h"
+# include "libft/libft.h"
+# include "get_next_line/get_next_line.h"
 
 typedef struct s_obj
 {
@@ -50,11 +50,11 @@ typedef struct s_images
 
 typedef struct s_so_long
 {
-	void	*mlx_ptr;
-	void	*mlx_win;
+	void		*mlx_ptr;
+	void		*mlx_win;
 	char		**map;
 	int			moves;
-	size_t			lns;
+	size_t		lns;
 	t_images	imgs;
 }	t_so_long;
 

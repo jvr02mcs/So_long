@@ -51,8 +51,8 @@ int	count_chars(char **map)
 		c += ft_howmany(map[i], 'C');
 		ex += ft_howmany(map[i++], 'E');
 	}
-	if (p < 1 && c < 1 && ex < 1 )
-		return(ft_error(4));
+	if (p < 1 && c < 1 && ex < 1)
+		return (ft_error(4));
 	if (p < 1 || p > 1)
 		return (ft_error(1));
 	if (c < 1)

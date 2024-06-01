@@ -1,6 +1,6 @@
 #include "./so_long.h"
 
-int	handle(int key, t_so_long *sl)
+static int	handle(int key, t_so_long *sl)
 {
 	if (key == XK_Escape)
 		return (close_win(sl));
@@ -14,11 +14,9 @@ int	handle(int key, t_so_long *sl)
 		move(sl, 0, -1, 3);
 	return (0);
 }
-void	free_resources(t_so_long *sl)
-{
-	int	i;
 
-	i = 0;
+static void	free_resources(t_so_long *sl, int i)
+{
 	while (i <= 3)
 		mlx_destroy_image(sl->mlx_ptr, sl->imgs.p.imgs[i++]);
 	if (sl->imgs.p.img)
@@ -44,7 +42,7 @@ void	free_resources(t_so_long *sl)
 		free_map(sl->map, 1);
 }
 
-void	put_images_to_window(t_so_long sl)
+static void	put_images_to_window(t_so_long sl)
 {
 	size_t	l;
 
@@ -76,6 +74,6 @@ int	main(int argc, char **argv)
 	mlx_key_hook(sl.mlx_win, handle, &sl);
 	mlx_hook(sl.mlx_win, 17, 0, close_win, &sl);
 	mlx_loop(sl.mlx_ptr);
-	free_resources(&sl);
+	free_resources(&sl, i);
 	return (0);
 }

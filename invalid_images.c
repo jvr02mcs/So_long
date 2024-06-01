@@ -2,7 +2,7 @@
 
 int	invalid_images(void)
 {
-	int fd;
+	int	fd;
 
 	fd = open("./images/nothing.xpm", O_RDONLY);
 	if (fd < 0)

@@ -3,7 +3,7 @@
 size_t	count_lines(char **argv)
 {
 	char	*line;
-	size_t		l;
+	size_t	l;
 	int		fd;
 
 	fd = open(argv[1], O_RDONLY | 0644);

@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-char **make_map_arr(int fd, int len)
+static char	**make_map_arr(int fd, int len)
 {
 	char	**map;
 	int		i;

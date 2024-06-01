@@ -1,19 +1,19 @@
 #include "so_long.h"
 
-void	put_plyr_img(t_so_long sl, int f, size_t i, int l)
+static void	put_plyr_img(t_so_long sl, int f, size_t i, int l)
 {
 	if (f == 0)
 		mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.p.imgs[0],
-				32 * i, 32 * l);
+			32 * i, 32 * l);
 	else if (f == 1)
 		mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.p.imgs[1],
-				32 * i, 32 * l);
+			32 * i, 32 * l);
 	else if (f == 2)
 		mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.p.imgs[2],
-				32 * i, 32 * l);
+			32 * i, 32 * l);
 	else if (f == 3)
 		mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.p.imgs[3],
-				32 * i, 32 * l);
+			32 * i, 32 * l);
 }
 
 void	putline(int l, t_so_long sl, int f)
@@ -23,7 +23,7 @@ void	putline(int l, t_so_long sl, int f)
 	i = 0;
 	while (sl.map[l][i])
 	{
-		if (sl.map[l][i] == '0')	
+		if (sl.map[l][i] == '0')
 			mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.f.img,
 				32 * i, 32 * l);
 		if (sl.map[l][i] == '1')

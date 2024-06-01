@@ -31,6 +31,8 @@ void	free_resources(t_so_long *sl)
 		mlx_destroy_image(sl->mlx_ptr, sl->imgs.c.img);
 	if (sl->imgs.ex.img)
 		mlx_destroy_image(sl->mlx_ptr, sl->imgs.ex.img);
+	if (sl->imgs.en.img)
+		mlx_destroy_image(sl->mlx_ptr, sl->imgs.en.img);
 	if (sl->mlx_win)
 		mlx_destroy_window(sl->mlx_ptr, sl->mlx_win);
 	if (sl->mlx_ptr)

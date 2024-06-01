@@ -75,7 +75,7 @@ int	good_chars(char *map_line)
 			return (0);
 		if (map_line[i] != '\n' && i == len - 1)
 		{
-			printf("\033[0;31mError:\033[0m invalid map struct\n");
+			ft_printf("\033[0;31mError:\033[0m invalid map struct\n");
 			return (0);
 		}
 		i++;

@@ -1,6 +1,6 @@
 #include "so_long.h"
 
-void	xpm_file_to_image(t_so_long *sl)
+static void	xpm_file_to_image(t_so_long *sl)
 {
 	sl->imgs.p.imgs[0] = mlx_xpm_file_to_image(sl->mlx_ptr, "./images/plyr.xpm",
 			&sl->imgs.p.w, &sl->imgs.p.h);
@@ -18,6 +18,8 @@ void	xpm_file_to_image(t_so_long *sl)
 			&sl->imgs.c.w, &sl->imgs.c.h);
 	sl->imgs.ex.img = mlx_xpm_file_to_image(sl->mlx_ptr, sl->imgs.ex.path,
 			&sl->imgs.ex.w, &sl->imgs.ex.h);
+	sl->imgs.en.img = mlx_xpm_file_to_image(sl->mlx_ptr, sl->imgs.en.path,
+			&sl->imgs.en.w, &sl->imgs.en.h);
 }
 
 void	init_game_win(t_so_long *sl)
@@ -33,6 +35,7 @@ void	init_game_win(t_so_long *sl)
 	sl->imgs.w.path = "./images/wall.xpm";
 	sl->imgs.c.path = "./images/coin.xpm";
 	sl->imgs.ex.path = "./images/exit.xpm";
+	sl->imgs.en.path = "./images/enemy.xpm";
 	xpm_file_to_image(sl);
 	sl->mlx_win = mlx_new_window(sl->mlx_ptr, (32 * (ft_strlen(sl->map[0]) - 1)),
 			32 * sl->lns - 1, "PACMON");

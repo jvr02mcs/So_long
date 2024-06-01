@@ -37,6 +37,9 @@ void	putline(int l, t_so_long sl, int f)
 		if (sl.map[l][i] == 'C')
 			mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.c.img,
 				32 * i, 32 * l);
+		if (sl.map[l][i] == 'G')
+			mlx_put_image_to_window(sl.mlx_ptr, sl.mlx_win, sl.imgs.en.img,
+				32 * i, 32 * l);
 		i++;
 	}
 }

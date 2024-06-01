@@ -45,6 +45,7 @@ typedef struct s_images
 	t_image		w;
 	t_image		ex;
 	t_image		c;
+	t_image		en;
 }	t_images;
 
 typedef struct s_so_long
@@ -57,7 +58,7 @@ typedef struct s_so_long
 	t_images	imgs;
 }	t_so_long;
 
-int	close_win(t_so_long *sl);
+int		close_win(t_so_long *sl);
 void	move(t_so_long *sl, int lns, int indx, int f);
 void	free_map(char **map, int f);
 int		ft_error(int f);
@@ -65,7 +66,7 @@ void	init_game_win(t_so_long *sl);
 void	putline(int l, t_so_long sl, int f);
 int		invalid_args(int argc, char **argv);
 int		invalid_walls(char **map, size_t len);
-int 	invalid_chars(char **map, size_t len);
+int		invalid_chars(char **map, size_t len);
 int		invalid_map(char **map, size_t len);
 int		invalid_images(void);
 size_t	count_lines(char **argv);

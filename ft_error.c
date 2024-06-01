@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrubio-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrubio-m <jrubio-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 15:16:47 by jrubio-m          #+#    #+#             */
-/*   Updated: 2024/06/01 15:16:49 by jrubio-m         ###   ########.fr       */
+/*   Updated: 2024/06/01 19:32:26 by jrubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_error(int f)
 {
-	printf("\033[0;31mError:\033[0m ");
+	ft_printf("\033[0;31mError:\033[0m ");
 	if (f == 1)
 		return (ft_printf("There must be at least one player and only one.\n"));
 	if (f == 2)

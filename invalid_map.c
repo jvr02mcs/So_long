@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   invalid_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrubio-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrubio-m <jrubio-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 15:17:10 by jrubio-m          #+#    #+#             */
-/*   Updated: 2024/06/01 15:17:17 by jrubio-m         ###   ########.fr       */
+/*   Updated: 2024/06/01 21:05:17 by jrubio-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,10 @@ int	invalid_map(char **map, size_t len)
 	}
 	if (invalid_chars(map, len))
 		return (1);
+	if (invalid_map_route(map, len))
+	{
+		ft_printf("\033[0;31mError:\033[0m Pacmon can't reach the exit\n");
+		return (1);
+	}
 	return (0);
 }

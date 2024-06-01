@@ -58,6 +58,7 @@ typedef struct s_so_long
 	t_images	imgs;
 }	t_so_long;
 
+int invalid_map_route(char **map, int lens);
 int		close_win(t_so_long *sl);
 void	move(t_so_long *sl, int lns, int indx, int f);
 void	free_map(char **map, int f);

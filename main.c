@@ -86,6 +86,6 @@ int	main(int argc, char **argv)
 	mlx_key_hook(sl.mlx_win, handle, &sl);
 	mlx_hook(sl.mlx_win, 17, 0, close_win, &sl);
 	mlx_loop(sl.mlx_ptr);
-	free_resources(&sl, i);
+	free_resources(&sl, 0);
 	return (0);
 }

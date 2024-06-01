@@ -15,6 +15,7 @@ SRC = main.c\
 	invalid_map.c\
 	invalid_images.c\
 	ft_error.c\
+	free_map.c\
 	get_next_line/get_next_line.c\
 	get_next_line/get_next_line_utils.c\
 

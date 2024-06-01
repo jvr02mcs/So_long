@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-static int	invalid_images(void)
+static int	invalid_plyr_images(void)
 {
 	int	fd;
 

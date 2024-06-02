@@ -1,7 +1,7 @@
-
-- Comprobar si el mapa no existe y salir con error.
-- Comprobar si puedo hacer el bonus las main funcs
-- Terminar bonus
-	Enemigos
-	Animaciones
-	Contador
+check all
+	modified:   Makefile
+	modified:   ft_error.c
+	modified:   invalid_map.c
+	modified:   read_map.c
+	modified:	invalid_map_route.c
+	git modified:   so_long.h

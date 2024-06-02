@@ -10,14 +10,12 @@
 # include "libft/libft.h"
 # include "get_next_line/get_next_line.h"
 
-typedef struct s_obj
+typedef struct s_map
 {
-	int	o;
-	int	w;
-	int	ex;
-	int	p;
-	int	c;
-}	t_obj;
+	int		rows;
+	int		cols;
+	bool	**data;
+}	t_map;
 
 typedef struct s_check
 {

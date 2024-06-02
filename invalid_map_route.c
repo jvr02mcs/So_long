@@ -1,26 +1,24 @@
 #include "so_long.h"
 
-// Crear la matriz de visitados
-t_map	*create_visited(int rows, int cols)
+static t_map	*create_visited(int lns, int indx)
 {
 	t_map	*visited;
 	int		i;
 
 	visited = (t_map *)malloc(sizeof(t_map));
-	visited->rows = rows;
-	visited->cols = cols;
-	visited->data = (bool **)malloc(rows * sizeof(bool *));
+	visited->rows = lns;
+	visited->cols = indx;
+	visited->data = (bool **)malloc(lns * sizeof(bool *));
 	i = 0;
-	while (i < rows)
+	while (i < lns)
 	{
-		visited->data[i] = (bool *)ft_calloc(cols, sizeof(bool));
+		visited->data[i] = (bool *)ft_calloc(indx, sizeof(bool));
 		i++;
 	}
 	return (visited);
 }
 
-// Liberar la memoria de la matriz de visitados
-void	free_visited(t_map *visited)
+static void	free_visited(t_map *visited)
 {
 	int	i;
 
@@ -31,27 +29,21 @@ void	free_visited(t_map *visited)
 	free(visited);
 }
 
-// Función DFS recursiva
-bool	dfs(char **map, int l, int i, t_map *visited)
+static bool	dfs(char **map, int l, int i, t_map *visited)
 {
-// Verificar si las coordenadas están fuera del mapa o si es una pared o ya está visitado
 	if (l < 0 || l >= visited->rows || i < 0 || i >= visited->cols
-		|| map[l][i] == '1' || visited->data[l][i])
+		|| map[l][i] == '1' || map[l][i] == 'G' || visited->data[l][i])
 		return (false);
-// Si encontramos la salida
-	if (map[l][i] == 'E')
-		return (true);
-// Marcar la celda actual como visitada
 	visited->data[l][i] = (true);
-// Moverse en las cuatro direcciones (arriba, abajo, izquierda, derecha)
-	if (dfs(map, x + 1, y, visited) || dfs(map, x - 1, y, visited)
-		|| dfs(map, x, y + 1, visited) || dfs(map, x, y - 1, visited))
+	if (dfs(map, l + 1, i, visited) || dfs(map, l - 1, i, visited)
+		|| dfs(map, l, i + 1, visited) || dfs(map, l, i - 1, visited))
+		return (true);
+	if (map[l][i] == 'E')
 		return (true);
 	return (false);
 }
 
-// Función para verificar si el jugador puede llegar a la salida
-bool	can_reach_exit(char **map, int l, int i, int lns)
+static bool	can_reach_exit(char **map, int l, int i, int lns)
 {
 	t_map	*visited;
 	bool	result;

@@ -44,7 +44,7 @@ static void	free_visited(t_map *visited)
 static bool	dfs(char **map, int l, int i, t_map *visited)
 {
 	if (l < 0 || l >= visited->rows || i < 0 || i >= visited->cols
-		|| map[l][i] == '1' || map[l][i] == 'G' || visited->data[l][i])
+		|| map[l][i] == '1' || visited->data[l][i])
 		return (false);
 	visited->data[l][i] = (true);
 	if (dfs(map, l + 1, i, visited) || dfs(map, l - 1, i, visited)

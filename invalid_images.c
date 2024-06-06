@@ -57,9 +57,5 @@ int	invalid_images(void)
 	if (fd < 0)
 		return (1);
 	close(fd);
-	fd = open("./textures/enemy.xpm", O_RDONLY);
-	if (fd < 0)
-		return (1);
-	close(fd);
 	return (0);
 }

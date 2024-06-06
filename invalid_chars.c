@@ -21,10 +21,9 @@ int	bad_char(char c)
 	ch.excheck = 'E' == c;
 	ch.plyrcheck = 'P' == c;
 	ch.ccheck = 'C' == c;
-	ch.encheck = 'G' == c;
 	if (ch.ocheck || ch.wcheck || ch.excheck)
 		return (0);
-	if (ch.plyrcheck || ch.ccheck || ch.encheck)
+	if (ch.plyrcheck || ch.ccheck)
 		return (0);
 	if (c == '\n')
 		return (0);
